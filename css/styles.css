@@ -145,6 +145,37 @@
     display: flex;
     width: 60%;
     justify-content: space-between; }
-    .bottom-nav .icons--item__link i {
-      color: #fff;
-      font-size: 6rem; }
+    .bottom-nav .icons--item__link {
+      width: 20rem;
+      height: 20rem;
+      border: .8rem solid #fff;
+      border-radius: .5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none; }
+      .bottom-nav .icons--item__link::before {
+        content: "";
+        height: 3rem;
+        width: .5rem;
+        background-color: #fff;
+        position: absolute;
+        top: 0; }
+      .bottom-nav .icons--item__link::after {
+        content: "";
+        height: 3rem;
+        width: .5rem;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0; }
+      .bottom-nav .icons--item__link i {
+        color: #fff;
+        font-size: 6rem;
+        width: 15rem;
+        height: 15rem;
+        background-color: #555;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: .3rem solid #fff;
+        text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
