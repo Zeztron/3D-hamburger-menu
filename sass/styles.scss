@@ -115,7 +115,6 @@
     z-index: 50;
 
     .nav-list {
-        background-color: #ccc;
         list-style: none;
         width: 80%;
         margin: auto;
@@ -123,5 +122,41 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        li {
+            perspective: 500px;
+        }
+
+        &--link {
+            text-decoration: none;
+            font-family: "Slabo 27px", serif;
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: #ccc;
+            background-color: black;
+            letter-spacing: .1rem;
+            padding: .5rem 1rem;
+            display: block;
+            position: relative;
+            transform-style: preserve-3d;
+            transform-origin: top;
+            transition: transform .3s;
+
+            &:hover {
+                transform: rotateX(90deg);
+            }
+
+            &::after {
+                content: attr(data-text);
+                position: absolute;
+                left: 0;
+                bottom: -100%;
+                background-color: black;
+                padding: inherit;
+                color: #16c3cf;
+                transform: rotateX(-90deg);
+                transform-origin: top;
+            }
+        }
     }
 }
